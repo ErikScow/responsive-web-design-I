@@ -63,6 +63,8 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+/* my code */
+
 .container{
 	width: 1000px;
 	margin: 0 auto;
@@ -70,13 +72,13 @@ h1, h2, h3, h4, h5 {
 }
 .navBar{
 	width: 100%;
-	top: 0;
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 nav{
-	display: flex;
+    display:flex;
 }
 nav a{
 	text-decoration: none;
@@ -183,4 +185,93 @@ ul{
 	display:flex;
 	flex-flow: column;
 	justify-content: space-evenly;
+}
+
+
+
+@media (max-width: 800px){
+    .container{
+        width: 750px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .navBar{
+        padding-top: 20px;
+        width: 100%;
+        display:flex;
+        flex-flow: column-reverse nowrap;
+        justify-content: center;
+    
+    }
+    
+    nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .rightBox{
+        display: none;
+    }
+
+    .leftBox{
+        height: 380px;
+    }
+
+    .headerBottom{
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainTop .content{
+        flex-basis: 49%;
+    }
+}
+
+@media (max-width: 400px){
+
+    .container{
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    a{
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid gray;
+    }
+
+    #top-link{
+        border-top: 1px solid gray;
+    }
+
+    .main{
+        margin: 0px 10px !important;
+    }
+
+    .mainTop{
+        flex-flow: column;
+        flex-basis: auto;
+    }
+
+    .mainBottom{
+        flex-flow: column;
+        flex-basis: auto;
+    }
+
+    .content{
+        padding: 15px 0px;
+    }
+
 }
