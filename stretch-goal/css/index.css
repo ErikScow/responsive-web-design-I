@@ -65,11 +65,7 @@ h1, h2, h3, h4, h5 {
 
 /* my code */
 
-.container{
-	width: 1000px;
-	margin: 0 auto;
-	padding: 0 50px;
-}
+
 .navBar{
 	width: 100%;
 	display:flex;
@@ -77,9 +73,7 @@ h1, h2, h3, h4, h5 {
 	align-items: center;
 }
 
-nav{
-    display:flex;
-}
+
 nav a{
 	text-decoration: none;
 	color: gray;
@@ -92,6 +86,7 @@ nav a:hover{
 
 .headerBottom{
 	display: flex;
+	justify-content: center;
 }
 .leftBox {
 	vertical-align: top;
@@ -128,28 +123,8 @@ button:hover{
 main{
 	border-top: 1px solid grey;
 	border-bottom: 1px solid grey;
-	padding: 50px 0px;
-	margin: 50px 0px 50px 0px;
-}
-.mainBottom .content{
-	flex-basis: 32%;
 }
 
-.mainTop .content{
-	flex-basis: 49%;
-}
-.mainTop{
-	display: flex;
-	justify-content: space-between;
-}
-.middle-img{
-	padding: 50px 0;
-	width: 100%;
-}
-.mainBottom {
-	display: flex;
-	justify-content: space-between;
-}
 
 .copyright{
 	padding-top:100px;
@@ -157,64 +132,95 @@ main{
 	text-align:center;
 }
 
-.sHeader{
-	padding-top: 50px;
+
+.container{
+	width: 500px;
+	margin: 0;
+	padding: 0;
 }
-h1{
-	font-size: xx-large;
-}
-.sMain{
-	padding: 0px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-content: space-evenly;
-	height: 880px;
-}
-.sContent{
-	width: 47%;
-	border: 1px solid grey;
-	padding: 20px;
-	background-color: aliceblue;
-}
-.bottom{
-	display: flex;
-	justify-content: space-between;
-}
-.bottom div{
-	padding-right: 55px;
-}
-ul{
-	height: 200px;
-	list-style: square inside;
+
+.navBar{
+	padding-top: 20px;
+	width: 100%;
 	display:flex;
-	flex-flow: column;
-	justify-content: space-evenly;
+	flex-flow: column-reverse nowrap;
+	justify-content: center;
+
 }
 
+nav{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-content: center;
+	align-items: center;
+	padding-top: 25px;
+}
 
+a{
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid gray;
+}
 
-@media (max-width: 800px){
+#top-link{
+	border-top: 1px solid gray;
+}
+
+.rightBox{
+	display: none;
+}
+
+main{
+	padding: 30px 0;
+	margin: 15px 15px;
+}
+
+.mainTop{
+	flex-flow: column;
+	flex-basis: auto;
+}
+
+.mainBottom{
+	flex-flow: column;
+	flex-basis: auto;
+}
+
+.content{
+	padding: 20px 0px;
+}
+
+.middle-img{
+	padding :30px 0;
+	width: 100%;
+}
+
+footer{
+	margin: 45px 15px 0px 15px;
+}
+
+@media (min-width: 500px){
     .container{
         width: 750px;
         margin: 0 auto;
         padding: 0 15px;
     }
-
-    .navBar{
-        padding-top: 20px;
-        width: 100%;
-        display:flex;
-        flex-flow: column-reverse nowrap;
-        justify-content: center;
-    
-    }
     
     nav{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	padding: 0;
     }
+
+	a{
+		border:0;
+	}
+
+	#top-link{
+		border: 0;
+	}
 
     .rightBox{
         display: none;
@@ -227,65 +233,66 @@ ul{
     .headerBottom{
         display: flex;
         justify-content: center;
-    }
+	}
 
-    .mainTop .content{
-        flex-basis: 49%;
-    }
-}
+	main{
+		margin: 50px 0px;
+		padding: 50px 0px;
+	}
+	
+	.content{
+		padding: 0;
+	}
 
-@media (max-width: 500px){
-
-    .container{
-        width: 500px;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav{
-        width: 100%;
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-        align-items: center;
-        padding-top: 25px;
-    }
-
-    a{
-        text-align: center;
-        width: 100%;
-        border-bottom: 1px solid gray;
-    }
-
-    #top-link{
-        border-top: 1px solid gray;
-    }
-
-    main{
-		padding: 30px 0;
-        margin: 15px 15px;
-    }
-
-    .mainTop{
-        flex-flow: column;
-        flex-basis: auto;
-    }
-
-    .mainBottom{
-        flex-flow: column;
-        flex-basis: auto;
-    }
-
-    .content{
-        padding: 20px 0px;
-    }
-
+    .mainBottom .content{
+		flex-basis: 32%;
+	}
+	
+	.mainTop .content{
+		flex-basis: 49%;
+	}
+	.mainTop{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
 	.middle-img{
-		padding :30px 0;
+		padding: 50px 0;
+	}
+	.mainBottom {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
 	}
 
 	footer{
-		margin: 45px 15px 0px 15px;;
+		margin: 0;
+		padding:0;
+	}
+}
+
+@media (min-width:800px){
+
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.navBar{
+		padding: 0;
+		flex-flow: row nowrap;
+		justify-content: space-between;
 	}
 
+	nav{
+		width: auto;
+	}
+
+	.headerBottom{
+		align-items:center;
+	}
+
+	.rightBox{
+		display:inline-block;
+	}
 }
