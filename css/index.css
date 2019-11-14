@@ -134,6 +134,10 @@ main{
 .mainBottom .content{
 	flex-basis: 32%;
 }
+
+.mainTop .content{
+	flex-basis: 49%;
+}
 .mainTop{
 	display: flex;
 	justify-content: space-between;
@@ -148,7 +152,8 @@ main{
 }
 
 .copyright{
-	padding:100px 0px 150px;
+	padding-top:100px;
+	padding-bottom: 20px;
 	text-align:center;
 }
 
@@ -256,8 +261,9 @@ ul{
         border-top: 1px solid gray;
     }
 
-    .main{
-        margin: 0px 10px !important;
+    main{
+		padding: 30px 0;
+        margin: 15px 15px;
     }
 
     .mainTop{
@@ -271,7 +277,15 @@ ul{
     }
 
     .content{
-        padding: 15px 0px;
+        padding: 20px 0px;
     }
+
+	.middle-img{
+		padding :30px 0;
+	}
+
+	footer{
+		margin: 45px 15px 0px 15px;;
+	}
 
 }
